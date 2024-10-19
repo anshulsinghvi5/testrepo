@@ -8,7 +8,7 @@ pipeline:
     ci:
       codebase:
         connectorRef: account.anshulgithub
-        repoName: https://github.com/williamwissemann/dvpwa
+        repoName: dvpwa
         build: <+input>
   stages:
     - stage:
