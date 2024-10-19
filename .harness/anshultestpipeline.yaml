@@ -39,3 +39,4 @@ pipeline:
                     advanced:
                       log:
                         level: debug
+                      fail_on_severity: critical
