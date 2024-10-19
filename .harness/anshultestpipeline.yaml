@@ -35,9 +35,7 @@ pipeline:
                     config: default
                     target:
                       type: repository
-                      detection: manual
-                      name: Runtime input
-                      variant: Runtime input
+                      detection: auto
                     advanced:
                       log:
                         level: debug
