@@ -54,3 +54,10 @@ pipeline:
                         advanced:
                           log:
                             level: info
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec:
+                    shell: Sh
+                    command: cd
