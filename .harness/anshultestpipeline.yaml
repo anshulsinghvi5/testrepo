@@ -26,17 +26,31 @@ pipeline:
             spec: {}
           execution:
             steps:
-              - step:
-                  type: Bandit
-                  name: Bandit_1
-                  identifier: Bandit_1
-                  spec:
-                    mode: orchestration
-                    config: default
-                    target:
-                      type: repository
-                      detection: auto
-                    advanced:
-                      log:
-                        level: debug
-                      fail_on_severity: critical
+              - parallel:
+                  - step:
+                      type: Bandit
+                      name: Bandit_1
+                      identifier: Bandit_1
+                      spec:
+                        mode: orchestration
+                        config: default
+                        target:
+                          type: repository
+                          detection: auto
+                        advanced:
+                          log:
+                            level: debug
+                          fail_on_severity: critical
+                  - step:
+                      type: Semgrep
+                      name: Semgrep_1
+                      identifier: Semgrep_1
+                      spec:
+                        mode: orchestration
+                        config: default
+                        target:
+                          type: repository
+                          detection: auto
+                        advanced:
+                          log:
+                            level: info
