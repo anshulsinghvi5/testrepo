@@ -1,0 +1,43 @@
+pipeline:
+  name: anshul-pipeline2
+  identifier: anshulpipeline2
+  projectIdentifier: anshul_teststo
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.anshulgithub
+        repoName: dvpwa
+        build: <+input>
+  stages:
+    - stage:
+        name: scan
+        identifier: scan
+        description: ""
+        type: SecurityTests
+        spec:
+          cloneCodebase: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Bandit
+                  name: Bandit_1
+                  identifier: Bandit_1
+                  spec:
+                    mode: orchestration
+                    config: default
+                    target:
+                      type: repository
+                      detection: manual
+                      name: Runtime input
+                      variant: Runtime input
+                    advanced:
+                      log:
+                        level: info
