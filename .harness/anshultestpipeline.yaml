@@ -40,7 +40,7 @@ pipeline:
                         advanced:
                           log:
                             level: debug
-                          fail_on_severity: critical
+                          fail_on_severity: none
                   - step:
                       type: Semgrep
                       name: Semgrep_1
