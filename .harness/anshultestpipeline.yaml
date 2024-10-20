@@ -71,5 +71,5 @@ pipeline:
                       New High: <+pipeline.stages.anshul_stage.spec.execution.steps.Bandit_1.output.outputVariables.NEW_HIGH> <br>
                       Medium: <+pipeline.stages.anshul_stage.spec.execution.steps.Bandit_1.output.outputVariables.MEDIUM> <br>
                       New Medium: <+pipeline.stages.anshul_stage.spec.execution.steps.Bandit_1.output.outputVariables.NEW_MEDIUM> <br> 
-                      See https://app.harness.io/ng/#/account/MY_ACCOUNT_ID/sto/orgs/default/"
+                      See https://app.harness.io/ng/#/account/avyka-ai-6367/sto/orgs/default/"
         tags: {}
