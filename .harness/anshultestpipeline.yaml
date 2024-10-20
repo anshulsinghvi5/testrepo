@@ -47,3 +47,22 @@ pipeline:
                   spec:
                     shell: Sh
                     command: cd
+    - stage:
+        name: email
+        identifier: email
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: Email
+                  name: Email_1
+                  identifier: Email_1
+                  spec:
+                    to: anshul@avyka.com
+                    cc: ""
+                    subject: sdfsfs
+                    body: sdfsfs
+                  timeout: 10m
+        tags: {}
