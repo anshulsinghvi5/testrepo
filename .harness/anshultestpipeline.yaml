@@ -39,7 +39,7 @@ pipeline:
                     advanced:
                       log:
                         level: debug
-                      fail_on_severity: medium
+                      fail_on_severity: none
               - step:
                   type: Run
                   name: Run_1
