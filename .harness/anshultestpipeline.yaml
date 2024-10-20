@@ -65,11 +65,11 @@ pipeline:
                     subject: "STO ALERT: Scan results for <+pipeline.name>"
                     body: |-
                       "STO scan of <+pipeline.name> found the following issues:  <br>
-                      Critical : <+pipeline.stages.SCAN_STAGE_ID.spec.execution.steps.SCAN_STEP_ID.output.outputVariables.CRITICAL> <br>
-                      New Critical : <+pipeline.stages.SCAN_STAGE_ID.spec.execution.steps.SCAN_STEP_ID.output.outputVariables.NEW_CRITICAL> <br>
-                      High: <+pipeline.stages.SCAN_STAGE_ID.spec.execution.steps.SCAN_STEP_ID.output.outputVariables.HIGH> <br>
-                      New High: <+pipeline.stages.SCAN_STAGE_ID.spec.execution.steps.SCAN_STEP_ID.output.outputVariables.NEW_HIGH> <br>
-                      Medium: <+pipeline.stages.SCAN_STAGE_ID.spec.execution.steps.SCAN_STEP_ID.output.outputVariables.MEDIUM> <br>
-                      New Medium: <+pipeline.stages.SCAN_STAGE_ID.spec.execution.steps.SCAN_STEP_ID.output.outputVariables.NEW_MEDIUM> <br> 
+                      Critical : <+pipeline.stages.anshul_stage.spec.execution.steps.Bandit_1.output.outputVariables.CRITICAL> <br>
+                      New Critical : <+pipeline.stages.anshul_stage.spec.execution.steps.Bandit_1.output.outputVariables.NEW_CRITICAL> <br>
+                      High: <+pipeline.stages.anshul_stage.spec.execution.steps.Bandit_1.output.outputVariables.HIGH> <br>
+                      New High: <+pipeline.stages.anshul_stage.spec.execution.steps.Bandit_1.output.outputVariables.NEW_HIGH> <br>
+                      Medium: <+pipeline.stages.anshul_stage.spec.execution.steps.Bandit_1.output.outputVariables.MEDIUM> <br>
+                      New Medium: <+pipeline.stages.anshul_stage.spec.execution.steps.Bandit_1.output.outputVariables.NEW_MEDIUM> <br> 
                       See https://app.harness.io/ng/#/account/MY_ACCOUNT_ID/sto/orgs/default/"
         tags: {}
